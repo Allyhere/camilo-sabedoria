@@ -96,7 +96,10 @@ main{
   position: relative;
 }
 
-.space{ position: relative;}
+.space{ 
+  position: relative;
+  cursor: default;
+}
 
 .space > p{
   position: absolute;

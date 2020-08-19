@@ -2,12 +2,17 @@ const frase = document.getElementById("frase");
 const bg = document.getElementById("main");
 const {random, floor} = Math;
 const twitter = document.getElementById("twitter");
+const clickspace = document.getElementById("click");
 
 let typewriter = new Typewriter(frase, {
   loop: false,
   delay: 30,
   autoStart: true
 });
+
+clickspace.addEventListener("click", function(){
+  fetchFrase()
+})
 
 window.addEventListener('keypress', function(ev){
   if(ev.keyCode == 32) fetchFrase();
