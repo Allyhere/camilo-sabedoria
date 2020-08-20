@@ -34,7 +34,7 @@ const fetchFrase =  () =>{
   })
 }
 
-const throtled = throttle(fetchFrase, 6000g);
+const throtled = throttle(fetchFrase, 6000);
 
 function typePhrase(string){
   typewriter
