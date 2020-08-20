@@ -3,6 +3,7 @@ const bg = document.getElementById("main");
 const {random, floor} = Math;
 const twitter = document.getElementById("twitter");
 const clickspace = document.getElementById("click");
+const { throttle } = _;
 
 let typewriter = new Typewriter(frase, {
   loop: false,
@@ -11,14 +12,15 @@ let typewriter = new Typewriter(frase, {
 });
 
 clickspace.addEventListener("click", function(){
-  fetchFrase()
+  throtled();
 })
 
 window.addEventListener('keypress', function(ev){
-  if(ev.keyCode == 32) fetchFrase();
+  if(ev.keyCode == 32) throtled();
 })
 
-function fetchFrase(){
+const fetchFrase =  () =>{
+  console.log("hey")
   fetch('./frases.json')
   .then(res => res.json())
   .then(json =>{
@@ -32,6 +34,7 @@ function fetchFrase(){
   })
 }
 
+const throtled = throttle(fetchFrase, 6000g);
 
 function typePhrase(string){
   typewriter
@@ -41,5 +44,7 @@ function typePhrase(string){
     .pauseFor(1000)
     .start();
 }
+
+
 
 fetchFrase();
