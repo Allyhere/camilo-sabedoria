@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans&display=swap");
 
 *,
 *::before,
-*::after{
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-size: 16px;
 }
 
-main{
+main {
   height: 100vh;
   width: 100%;
   overflow: hidden;
   display: grid;
-  background: rgb(6,6,6) url('./assets/2.png');
+  background: rgb(6, 6, 6) url("./assets/2.png");
   background-size: contain;
   background-position: bottom right;
   background-repeat: no-repeat;
@@ -26,55 +26,51 @@ main{
   padding: 10px;
 }
 
-.pop{
+.pop {
   grid-area: title;
   position: absolute;
-  background: rgb(6,6,6);
+  background: rgb(6, 6, 6);
   width: 250px;
   height: 40px;
-  z-index: 999;
+  z-index: 2;
   display: grid;
   place-items: center;
   transform-origin: top;
   animation: begone 2s forwards ease-out;
 }
 
-@keyframes begone{
-  from{transform: scale(2);}
-  to{transform: scale(1);}
+@keyframes begone {
+  from {
+    transform: scale(2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-.logo{
+.logo {
   filter: invert();
   width: 250px;
   object-fit: contain;
 }
 
-
-/* h1{
-  color: #FAFAFA;
-  font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif;
-  width: 20ch;
-} */
-
-#frase{
+#frase {
   grid-area: frase;
   align-self: center;
   justify-self: center;
   text-align: center;
-  font-family: 'Courgette', cursive;
-  color: #FAFAFA;
+  font-family: "Courgette", cursive;
+  color: #fafafa;
   font-size: 2rem;
-  letter-spacing: .1ch;
+  letter-spacing: 0.1ch;
   line-height: 1.4;
   width: 80%;
   max-width: 30ch !important;
   quotes: "“" "”" "‘" "’";
 }
 
-@media screen and (max-width: 430px){
-  #frase{
+@media screen and (max-width: 430px) {
+  #frase {
     font-size: 1.8em;
   }
 }
@@ -87,7 +83,7 @@ main{
   content: close-quote;
 }
 
-.container{
+.container {
   place-self: center;
   display: flex;
   flex-flow: column nowrap;
@@ -96,56 +92,56 @@ main{
   position: relative;
 }
 
-.space{ 
+.space {
   position: relative;
-  cursor: default  ;
+  cursor: default;
 }
 
-.space > p{
+.space > p {
   position: absolute;
   text-align: center;
   width: fit-content;
   top: -25px;
   left: 50%;
   transform: translateX(-50%);
-  color: #FAFAFA ;
-  font-size: .8rem;
-  font-family: 'Open Sans', sans-serif;
-  text-shadow: 0px 0px 10px rgba(250, 250, 250, .4);
+  color: #fafafa;
+  font-size: 0.8rem;
+  font-family: "Open Sans", sans-serif;
+  text-shadow: 0 0 10px rgba(250, 250, 250, 0.4);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-a button{
+a button {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   padding: 7px 14px 9px;
   border-radius: 25px;
   border: none;
-  background: #1DA1F2;
-  box-shadow: 3px 3px 10px 5px rgba(56, 174, 248, .1);
-  transition: background .6s ease-in-out;
+  background: #1da1f2;
+  box-shadow: 3px 3px 10px 5px rgba(56, 174, 248, 0.1);
+  transition: background 0.6s ease-in-out;
   cursor: pointer;
 }
 
-a button:hover{
+a button:hover {
   background: #4ab9fd;
 }
 
-a button img{
+a button img {
   width: 25px;
   object-fit: contain;
 }
 
-a button p{
-  color: #FAFAFA;
+a button p {
+  color: #fafafa;
   font-size: 1.2rem;
   margin-left: 8px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  letter-spacing: .01em;
+  letter-spacing: 0.01em;
 }
-
